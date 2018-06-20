@@ -1,4 +1,4 @@
-react-redux实现todoList
+react + redux + router + todoList
 ===
 
 Installation
