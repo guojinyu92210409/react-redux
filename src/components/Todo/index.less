@@ -1,0 +1,58 @@
+.p_todo{
+    .inputBox{
+        .input{
+            border: 1px solid #ccc;
+            height: 30px;
+            line-height: 30px;
+            padding-left: 10px;
+        }
+        .btn{
+            text-align: center;
+            line-height: 30px;
+            background: blue;
+            color: #fff;
+            padding: 0 10px;
+            margin-left: 20px;
+        }
+    }
+    .list{
+        margin-top: 10px;
+        max-height: 200px;
+        overflow: auto;
+        li{
+            line-height: 25px;
+            padding-left: 10px;
+            font-size: 16px;
+            .select{
+                margin: 0 10px;
+                width: 14px;
+                height: 14px;
+                border: 1px solid #444;
+                display: inline-block;
+                line-height: 14px;
+            }
+            &.active{
+                .select:before{
+                    content:'√'
+                }
+            }
+        }
+    }
+    .btnBox{
+        margin-top: 10px;
+        input{
+            width: 70px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            color: blue;
+            margin: 0 10px;
+            border-radius: 10px;
+            border: 1px solid blue;
+            &.active{
+                 background: blue;
+                 color: #fff;
+            }
+        }
+    }
+}
