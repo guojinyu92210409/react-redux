@@ -42,7 +42,7 @@ class Todo extends Component{
             <div className="p_todo">
                 <div className="inputBox">
                     <input type="text" className="input" onInput={this.handleInputChange.bind(this)} ref={(input) => this.input = input} value={this.state.value}/>
-                    <input type="button" value="添加todo" className="btn" onClick={this.add.bind(this)} disabled={this.state.isDisabled}/>
+                    <input type="button" value="添加todo" className={this.state.isDisabled?'disabled btn':'btn'} onClick={this.add.bind(this)} disabled={this.state.isDisabled}/>
                 </div>
                 <ul className="list">
                 {
