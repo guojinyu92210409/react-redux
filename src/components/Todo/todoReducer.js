@@ -31,27 +31,27 @@ const initialState={
 export default (state = initialState, action) => {
     switch(action.type){
         case 'ADD_TODO':
-        return Object.assign({}, state, {
-            todos: [
-                ...state.todos,
-                {
-                    id: action.id,
-                    text: action.text,
-                    isSelected: false
-                }
-            ]
-        })
-
-        // return{
-        //     ...state,
-        //     todos:[...state.todos,
+        // return Object.assign({}, state, {
+        //     todos: [
+        //         ...state.todos,
         //         {
         //             id: action.id,
         //             text: action.text,
         //             isSelected: false
         //         }
         //     ]
-        // }
+        // })
+
+        return{
+            ...state,
+            todos:[...state.todos,
+                {
+                    id: action.id,
+                    text: action.text,
+                    isSelected: false
+                }
+            ]
+        }
 
         // return{
         //     todos: state.todos.concat([{
@@ -61,22 +61,23 @@ export default (state = initialState, action) => {
         //     }])
         // }
         case 'TOGGLE_TODO':
-         return Object.assign({}, state, {
-             todos: state.todos.map((todo) => {
-                 if (todo.id === action.id) {
-                     return Object.assign({}, todo, {
-                         isSelected: !todo.isSelected
-                     })
-                 }
-                 return todo
-             })
-         })
-        // return {
-        //     ...state,
-        //     todos: state.todos.map(item=>item.id === action.id ? { ...item,
-        //         isSelected: !item.isSelected
-        //     } : item)
-        // }
+        //  return Object.assign({}, state, {
+        //      todos: state.todos.map((todo) => {
+        //          if (todo.id === action.id) {
+        //              return Object.assign({}, todo, {
+        //                  isSelected: !todo.isSelected
+        //              })
+        //          }
+        //          return todo
+        //      })
+        //  })
+
+        return {
+            ...state,
+            todos: state.todos.map(item=>item.id === action.id ? { ...item,
+                isSelected: !item.isSelected
+            } : item)
+        }
         default:
          return state
     }
