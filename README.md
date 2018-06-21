@@ -1,6 +1,8 @@
 react + redux + router + todoList
 ===
 
+git clone git@github.com:guojinyu92210409/react-redux.git
+
 Installation
 ---
 npm install
