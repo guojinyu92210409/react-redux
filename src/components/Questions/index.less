@@ -1,0 +1,42 @@
+.p_about{
+    .title{
+        line-height: 30px;
+        padding:10px 20px;
+    }
+    .item{
+        padding: 10px 20px;
+        .question{
+            display: block;
+            width: 100%;
+            font-size: 16px;
+            color: #444;
+            line-height: 30px;
+        }
+        .list{
+            padding-left: 15px;
+            li{
+                height:30px;
+                .select{
+                    margin-right: 5px;
+                    width: 14px;
+                    height: 14px;
+                    border: 1px solid #444;
+                    display: inline-block;
+                    text-align: center;
+                    line-height: 14px;
+                }
+                 &.active{
+                    .select:before{
+                        content:'√'
+                    }
+                }
+                .content{
+                    font-size: 14px;
+                    color: #444;
+                    line-height: 30px;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}
